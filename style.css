@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg-main: #1C1C26; 
+    --accent-gold: #D9B340; 
+    --text-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- BARRE LATÉRALE --- */
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-gold);
+    font-size: 28px;
+    padding: 0 40px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* Conteneur avec la bordure jaune à droite */
+.sidebar-menu-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--accent-gold);
+    border-top: 2px solid var(--accent-gold); 
+    padding: 40px;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav li {
+    margin-bottom: 40px;
+}
+
+.main-nav a, .nav-bottom a {
+    color: var(--accent-gold); 
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-bottom {
+    margin-top: auto; 
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.main-content {
+    flex: 1;
+    padding: 40px 60px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--accent-gold);
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid var(--text-white);
+    color: var(--text-white);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- GRILLE DES SPECTACLES --- */
+.shows-grid {
+    display: grid;
+    /* Crée 3 colonnes égales, comme sur ta maquette */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+}
+
+.show-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-image {
+    width: 100%;
+    /* On force une hauteur carrée approximative pour correspondre à tes affiches */
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.show-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--text-white);
+}
